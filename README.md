@@ -1,4 +1,4 @@
-# AWS IAM Least-Privilege Security Lab
+# AWS IAM Least-Privilege Security Lab ☁️
 
 A hands-on AWS security lab focused on IAM authorization, least-privilege access, permission validation, and CloudTrail auditing.
 
@@ -8,7 +8,7 @@ This project simulates a developer access scenario in AWS and demonstrates how n
 
 The goal of this lab was to create a controlled AWS environment where a developer identity could perform only the S3 operations required for a simulated workflow.
 
-The project included:
+☼ The project included:
 
 - Creating and configuring an isolated S3 security lab environment.
 - Creating an IAM developer identity and group.
@@ -32,7 +32,7 @@ The project included:
 
 ## Security Controls
 
-The lab used the following security controls:
+☼ The lab used the following security controls:
 
 - IAM group-based permission management.
 - Customer-managed IAM policy with narrowly scoped S3 object permissions.
@@ -45,7 +45,7 @@ The lab used the following security controls:
 
 ## Testing & Results
 
-The developer identity was tested using both the IAM Policy Simulator and AWS CLI requests.
+☼ The developer identity was tested using both the IAM Policy Simulator and AWS CLI requests.
 
 | S3 Action | Policy Simulator | AWS CLI Test |
 | --- | --- | --- |
@@ -60,7 +60,7 @@ CloudTrail data events were then used to verify the S3 activity and capture the 
 
 ## Assessment
 
-A detailed security assessment documents the intentionally over-permissioned baseline, least-privilege policy design, permission validation, CloudTrail investigation, and final security findings.
+☼ A detailed security assessment documents the intentionally over-permissioned baseline, least-privilege policy design, permission validation, CloudTrail investigation, and final security findings.
 
 [View the Security Assessment](findings/security-assessment.md)
 
@@ -84,19 +84,19 @@ Supporting screenshots are included in the `screenshots/` directory.
 
 ### IAM Policy
 
-The developer IAM policy grants only `s3:PutObject` and `s3:DeleteObject` access to objects within the designated S3 bucket.
+☼ The developer IAM policy grants only `s3:PutObject` and `s3:DeleteObject` access to objects within the designated S3 bucket.
 
 ![Developer IAM Policy](screenshots/developer-iam-policy.png)
 
 ### IAM Policy Simulator
 
-The Policy Simulator confirmed that the intended S3 object actions were allowed while unauthorized actions were denied.
+☼ The Policy Simulator confirmed that the intended S3 object actions were allowed while unauthorized actions were denied.
 
 ![IAM Policy Simulator](screenshots/policy-simulator.png)
 
 ## Key Findings
 
-The assessment confirmed that the `Niaomi-Developer` IAM identity had narrowly scoped S3 object permissions.
+☼ The assessment confirmed that the `Niaomi-Developer` IAM identity had narrowly scoped S3 object permissions.
 
 The policy allowed:
 
@@ -112,10 +112,10 @@ IAM Policy Simulator and AWS CLI testing produced matching results, confirming t
 
 CloudTrail data events provided audit evidence for the S3 API activity generated during testing, including successful and denied requests.
 
-The final configuration demonstrated least-privilege access by limiting the developer identity to the S3 operations required for the simulated workflow.
+☼ The final configuration demonstrated least-privilege access by limiting the developer identity to the S3 operations required for the simulated workflow.
 
 ## Security & Privacy
 
-This project was performed in a personal AWS lab environment for educational and portfolio purposes.
+☼ This project was performed in a personal AWS lab environment for educational and portfolio purposes.
 
-Screenshots containing sensitive AWS metadata were sanitized before being included in the repository. No long-lived AWS access keys, production credentials, or real company data were used.
+☼ Screenshots containing sensitive AWS metadata were sanitized before being included in the repository. No long-lived AWS access keys, production credentials, or real company data were used.

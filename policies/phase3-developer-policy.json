@@ -9,7 +9,7 @@
                 "s3:DeleteObject"
             ],
             "Resource": [
-                "arn:aws:s3:::niaomi-myiam-security-lab-[ACCOUNT-ID]-us-east-1-an/*"
+                "arn:aws:s3:::YOUR-BUCKET-NAME/*"
             ]
         }
     ]

@@ -1,0 +1,16 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "conditionalpolicy",
+      "Effect": "Allow",
+      "Action": ["s3:PutObject", "s3:GetObject", "s3:DeleteObject"],
+      "Resource": "arn:aws:s3:::niaomi-myiam-security-lab-[account-id]-us-east-1-an/*",
+      "Condition": {
+        "DateLessThan": {
+          "aws:CurrentTime": "2020-01-01T00:00:00Z"
+        }
+      }
+    }
+  ]
+}

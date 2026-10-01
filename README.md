@@ -8,7 +8,7 @@
 
 ## Why This Matters
 
-Over-permissioned identities are one of the most common cloud security risks. In the 2019 Capital One breach, an IAM role with broader S3 access than it needed allowed an attacker to read data from many buckets once its credentials were obtained ([A Systematic Analysis of the Capital One Data Breach: Critical Lessons Learned](https://dl.acm.org/doi/full/10.1145/3546068) (ACM Transactions on Privacy and Security)). This lab practices as well as demostrating the controls that limit that exposure and the risks that comes with over exposure/overbroad policies: granting only required actions, layering explicit denies, and logging enough to prove what was allowed and what was blocked.
+Over-permissioned identities are one of the most common cloud security risks. In the 2019 Capital One breach, an IAM role with broader S3 access than it needed allowed an attacker to read data from many buckets once its credentials were obtained ([ACM case study](https://dl.acm.org/doi/full/10.1145/3546068)). This lab demonstrates the risks of over-broad policies and practices the controls that limit them: granting only required actions, layering explicit denies, and logging enough to prove what was allowed and what was blocked.
 
 ## The Four Phases
 
@@ -201,18 +201,23 @@ Sanitized screenshots are organized by phase in the `evidence/` folder. Expand a
 
 ### Phase 3: IAM Policy
 
-![Developer IAM Policy](evidence/phase3-narrow/developer-iam-policy.png)
+![Phase 3 Developer IAM Policy](evidence/phase3-narrow/developer-iam-policy-phase3.png)
 
 ### Phase 3: IAM Policy Simulator
 
-![Phase 3 Policy Simulator](evidence/phase3-narrow/policy-simulator.png)
+![Phase 3 Policy Simulator](evidence/phase3-narrow/policy-simulator-phase3.png)
+
+### Phase 3: AWS CLI Test Results
+
+![Phase 3 CLI Tests](evidence/phase3-narrow/phase3-narrowCLITests.png)
+![Phase 3 CLI Tests, continued](evidence/phase3-narrow/phase3-narrowCLITests2.png)
 
 ### Phase 3: CloudTrail Confirmation
 
-![CloudTrail PutObject](evidence/phase3-narrow/cloudtrail-putobject.png)
-![CloudTrail GetObject AccessDenied](evidence/phase3-narrow/cloudtrail-getobject-denied.png)
-![CloudTrail DeleteObject](evidence/phase3-narrow/cloudtrail-deleteobject.png)
-![CloudTrail DeleteBucket AccessDenied](evidence/phase3-narrow/cloudtrail-deletebucket-denied.png)
+![Phase 3 CloudTrail PutObject](evidence/phase3-narrow/cloudtrail-putobject-phase3.png)
+![Phase 3 CloudTrail GetObject AccessDenied](evidence/phase3-narrow/cloudtrail-getobject-denied-phase3.png)
+![Phase 3 CloudTrail DeleteObject](evidence/phase3-narrow/cloudtrail-deleteobject-phase3.png)
+![Phase 3 CloudTrail DeleteBucket AccessDenied](evidence/phase3-narrow/cloudtrail-deletebucket-phase3.png)
 
 </details>
 
